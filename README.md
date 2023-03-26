@@ -2,7 +2,7 @@
 <h1 align="center">0x19. C - Stacks, Queues - LIFO, FIFO  </h1>
 
 ***
-**Project to be done in teams of 2 people my team: [Nyaberi Nyaberi](https://github.com/nyaberi-mayaka), [Cyrus Muthui](https://github.com/CyrusMuthui)**
+**Project to be done in teams of 2 people my team: Esther Kimani and Jones Kisaka 
  ***
 ## Resources
 **Read or watch**:
