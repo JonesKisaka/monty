@@ -97,7 +97,7 @@ void free_token(void);
 int check_opcode(stack_t **head, unsigned int line_num);
 int call_funcs(stack_t **head, int i);
 int atoi_int(int, int);
-int check_int();
+int check_int(void);
 void malloc_failure(void);
 void free_memory(stack_t **head, char *line, FILE *fp);
 
