@@ -1,8 +1,9 @@
-
 <h1 align="center">0x19. C - Stacks, Queues - LIFO, FIFO  </h1>
 
 ***
-**Project to be done in teams of 2 people my team: Esther Kimani and Jones Kisaka 
+**Project to be done in teams of 2 people**
+
+**my team: [Nyaberi Nyaberi](https://github.com/nyaberi-mayaka), [Cyrus Muthui](https://github.com/CyrusMuthui)**
  ***
 ## Resources
 **Read or watch**:
@@ -164,18 +165,18 @@ The opcode `pint` prints the value at the top of the stack, followed by a new li
 * Usage: `pint`
 * If the stack is empty, print the error message `L<line_number>: can't pint, stack empty`, followed by a new line, and exit with the status `EXIT_FAILURE`
 ```
-julien@ubuntu:~/monty$ cat bytecodes/06.m 
+julien@ubuntu:~/monty$ cat bytecodes/06.m
 push 1
 pint
 push 2
 pint
 push 3
 pint
-julien@ubuntu:~/monty$ ./monty bytecodes/06.m 
+julien@ubuntu:~/monty$ ./monty bytecodes/06.m
 1
 2
 3
-julien@ubuntu:~/monty$ 
+julien@ubuntu:~/monty$
 ```
 ### 2. pop
 Implement the `pop` opcode.
@@ -184,7 +185,7 @@ The opcode `pop` removes the top element of the stack.
 * Usage: `pop`
 * If the stack is empty, print the error message `L<line_number>: can't pop an empty stack`, followed by a new line, and exit with the status `EXIT_FAILURE`
 ```
-julien@ubuntu:~/monty$ cat bytecodes/07.m 
+julien@ubuntu:~/monty$ cat bytecodes/07.m
 push 1
 push 2
 push 3
@@ -195,14 +196,14 @@ pop
 pall
 pop
 pall
-julien@ubuntu:~/monty$ ./monty bytecodes/07.m 
+julien@ubuntu:~/monty$ ./monty bytecodes/07.m
 3
 2
 1
 2
 1
 1
-julien@ubuntu:~/monty$ 
+julien@ubuntu:~/monty$
 ```
 
 ### 3. swap
@@ -212,21 +213,21 @@ The opcode `swap` swaps the top two elements of the stack.
 * Usage: `swap`
 * If the stack contains less than two elements, print the error message `L<line_number>: can't swap, stack too short`, followed by a new line, and exit with the status `EXIT_FAILURE`
 ```
-julien@ubuntu:~/monty$ cat bytecodes/09.m 
+julien@ubuntu:~/monty$ cat bytecodes/09.m
 push 1
 push 2
 push 3
 pall
 swap
 pall
-julien@ubuntu:~/monty$ ./monty bytecodes/09.m 
+julien@ubuntu:~/monty$ ./monty bytecodes/09.m
 3
 2
 1
 2
 3
 1
-julien@ubuntu:~/monty$ 
+julien@ubuntu:~/monty$
 ```
 ### 4. add
 Implement the `add` opcode.
@@ -240,7 +241,7 @@ The opcode `add` adds the top two elements of the stack.
 	* The top element of the stack contains the result
 	* The stack is one element shorter
 ```
-julien@ubuntu:~/monty$ cat bytecodes/12.m 
+julien@ubuntu:~/monty$ cat bytecodes/12.m
 push 1
 push 2
 push 3
@@ -248,7 +249,7 @@ pall
 add
 pall
 
-julien@ubuntu:~/monty$ ./monty bytecodes/12.m 
+julien@ubuntu:~/monty$ ./monty bytecodes/12.m
 3
 2
 1
@@ -272,14 +273,14 @@ The opcode `sub` subtracts the top element of the stack from the second top elem
 	* The top element of the stack contains the result
 	* The stack is one element shorter
 ```
-julien@ubuntu:~/monty$ cat bytecodes/19.m 
+julien@ubuntu:~/monty$ cat bytecodes/19.m
 push 1
 push 2
 push 10
 push 3
 sub
 pall
-julien@ubuntu:~/monty$ ./monty bytecodes/19.m 
+julien@ubuntu:~/monty$ ./monty bytecodes/19.m
 7
 2
 1
@@ -328,10 +329,10 @@ The opcode `pchar` prints the char at the top of the stack, followed by a new li
 * If the value is not in the ascii table (man ascii) print the error message `L<line_number>: can't pchar, value out of range`, followed by a new line, and exit with the status `EXIT_FAILURE`
 * If the stack is empty, print the error message `L<line_number>: can't pchar, stack empty`, followed by a new line, and exit with the status `EXIT_FAILURE`
 ```
-julien@ubuntu:~/monty$ cat bytecodes/28.m 
+julien@ubuntu:~/monty$ cat bytecodes/28.m
 push 72
 pchar
-julien@ubuntu:~/monty$ ./monty bytecodes/28.m 
+julien@ubuntu:~/monty$ ./monty bytecodes/28.m
 H
 julien@ubuntu:~/monty$
 ```
@@ -348,7 +349,7 @@ The opcode `pstr` prints the string starting at the top of the stack, followed b
 	* the value of the element is not in the ascii table
 * If the stack is empty, print only a new line
 ```
-julien@ubuntu:~/monty$ cat bytecodes/31.m 
+julien@ubuntu:~/monty$ cat bytecodes/31.m
 push 1
 push 2
 push 3
@@ -363,9 +364,9 @@ push 104
 push 99
 push 83
 pstr
-julien@ubuntu:~/monty$ ./monty bytecodes/31.m 
+julien@ubuntu:~/monty$ ./monty bytecodes/31.m
 School
-julien@ubuntu:~/monty$ 
+julien@ubuntu:~/monty$
 ```
 ### 13. rotl
 Implement the `rotl` opcode.
@@ -375,7 +376,7 @@ The opcode `rotl` rotates the stack to the top.
 * The top element of the stack becomes the last one, and the second top element of the stack becomes the first one
 * `rotl` never fails
 ```
-julien@ubuntu:~/monty$ cat bytecodes/35.m 
+julien@ubuntu:~/monty$ cat bytecodes/35.m
 push 1
 push 2
 push 3
@@ -389,7 +390,7 @@ push 0
 pall
 rotl
 pall
-julien@ubuntu:~/monty$ ./monty bytecodes/35.m 
+julien@ubuntu:~/monty$ ./monty bytecodes/35.m
 0
 9
 8
@@ -410,7 +411,7 @@ julien@ubuntu:~/monty$ ./monty bytecodes/35.m
 2
 1
 0
-julien@ubuntu:~/monty$ 
+julien@ubuntu:~/monty$
 ```
 ### 14. rotr
 Implement the `rotr` opcode.
@@ -473,7 +474,7 @@ julien@ubuntu:~/monty$ ./monty bytecodes/47.m
 2
 3
 11111
-julien@ubuntu:~/monty$ 
+julien@ubuntu:~/monty$
 ```
 ### 16. Brainf*ck
 Write a Brainf*ck script that prints `School`, followed by a new line.
@@ -482,9 +483,9 @@ Write a Brainf*ck script that prints `School`, followed by a new line.
 * You can install the `bf` interpreter to test your code: `sudo apt-get install bf`
 * Read: [Brainf*ck](https://en.wikipedia.org/wiki/Brainfuck)
 ```
-julien@ubuntu:~/monty/bf$ bf 1000-school.bf 
+julien@ubuntu:~/monty/bf$ bf 1000-school.bf
 School
-julien@ubuntu:~/monty/bf$ 
+julien@ubuntu:~/monty/bf$
 ```
 ### 17. Add two digits
 Add two digits given by the user.
@@ -510,7 +511,7 @@ julien@ubuntu:~/monty/bf$ bf 1002-mul.bf
 Multiply two digits given by the user.
 * Read the two digits from `stdin`, multiply them, and print the result, followed by a new line
 ```
-julien@ubuntu:~/monty/bf$ bf 1003-mul.bf 
+julien@ubuntu:~/monty/bf$ bf 1003-mul.bf
 77
 49
 julien@ubuntu:~/monty/bf$
